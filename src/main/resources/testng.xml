@@ -1,0 +1,33 @@
+<?xml version= "1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite thread-count="2" name="suite name" parallel="tests"
+	verbose="3">
+
+
+	<!-- comment if we create groups then use following tags <groups> <define 
+		name="critical"> </define> </groups> -->
+
+	<!-- Start First Test -->
+	<test name="Admin_LTE test chrome" parallel="methods"
+		thread-count="5">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<!-- <class name= " class name along with package name" /> -->
+			<class name="com.myTests.LoginPageTest" />
+		</classes>
+
+	</test>  <!-- End First Test -->
+
+	<!-- Start Second Test -->
+<!-- 	<test name="Admin_LTE test Firefox" parallel="methods"
+		thread-count="5">
+		<parameter name="browser" value="FF"></parameter>
+		<classes>
+			<class name="com.myTests.LoginPageTest"></class>
+		</classes>
+
+
+	</test>  -->
+	<!-- End Second Test -->
+
+</suite> <!-- suite -->
